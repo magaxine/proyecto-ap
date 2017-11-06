@@ -67,6 +67,36 @@
         <type>TextArea</type>
     </fields>
     <fields>
+        <fullName>En_pre_parto__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Secado de la vaca</inlineHelpText>
+        <label>En pre-parto</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>En_tambo__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>La vaca esta en ordeñe si esta opción está marcada.</description>
+        <externalId>false</externalId>
+        <label>En tambo</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Muerta__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Se va a tickear esta box cuando la vaca fallece.</description>
+        <externalId>false</externalId>
+        <label>Muerta</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
         <fullName>Nro_de_Vaca__c</fullName>
         <caseSensitive>false</caseSensitive>
         <description>Identificación de la vaca.</description>
@@ -136,6 +166,16 @@
         <trackTrending>false</trackTrending>
         <type>Text</type>
         <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Vendida__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Esta opción será seleccionada cuando la vaca se vendió.</description>
+        <externalId>false</externalId>
+        <label>Vendida</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
     </fields>
     <gender>Feminine</gender>
     <label>Vaca</label>

@@ -57,6 +57,24 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <fields>
+        <fullName>Fecha__c</fullName>
+        <externalId>false</externalId>
+        <label>Fecha</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Fecha_en_pre_parto__c</fullName>
+        <externalId>false</externalId>
+        <label>Fecha en pre-parto</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
         <fullName>Sexo_de_cria__c</fullName>
         <externalId>false</externalId>
         <label>Sexo de cría</label>
