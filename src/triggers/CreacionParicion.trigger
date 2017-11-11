@@ -17,7 +17,7 @@ trigger CreacionParicion on Inseminacion__c (after update) {
             
             //Secado de la vaca
             Event e2 = new Event();
-            Date preparto = fechaInseminacion.addDays(1);
+            e2.StartDateTime = fechaInseminacion.addDays(1);
             e2.IsAllDayEvent = true;
             //Hago una consulta de la vaca para tomar su numero, porque el objeto
             //que viene del trigger no puede navegar a los atributos de sus objetos 
@@ -27,6 +27,10 @@ trigger CreacionParicion on Inseminacion__c (after update) {
                                    where id=:iNew.Id];
             e.Subject = 'Pare la vaca'+' '+ aux2.Vaca__r.Nro_de_vaca__c;
              insert e;
+            
+            e2.Subject = 'Secado de vaca' + ' ' + aux2.Vaca__r.Nro_de_vaca__c;
+			insert e2;
+            
             
              //Updateo a la vaca con ese Id para marcar que esta pregnant
             Vaca__c vaca = new Vaca__c();
@@ -40,10 +44,7 @@ trigger CreacionParicion on Inseminacion__c (after update) {
             paricion.Fecha_en_pre_parto__c = e2.StartDateTime.addDays(1);
             paricion.Vaca__c = aux2.vaca__r.id;
             insert paricion;
-                    
-            e2.Subject = 'Secado de vaca' + ' ' + aux2.Vaca__r.Nro_de_vaca__c;
-			
-            
+     
         }
     }       
 }
