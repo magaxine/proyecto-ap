@@ -181,6 +181,11 @@
     <label>Vaca</label>
     <listViews>
         <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Caravana_Blanca__c</columns>
+        <columns>En_pre_parto__c</columns>
+        <columns>En_tambo__c</columns>
+        <columns>Nro_de_Vaca__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>

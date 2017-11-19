@@ -6,17 +6,8 @@ public class schedulableClassTest implements Schedulable {
         /*Contact con = new Contact();
         con.lastname = 'Scheduled';
         insert con;*/
-        
-        List<Paricion__c> pariciones = [Select id from paricion__c];
-            
-            for (integer i=0; i<pariciones.size(); i++){
-                Paricion__c paricion = pariciones.get(i);
-                //Si la fecha de pre-parto es en 7 dias, avisar.
-                Datetime hoy = Date.today();
-                if(paricion.Fecha_en_pre_parto__c == hoy.addDays(7)){
-                    //mando mail
-                }
-            }
-    }
+        //MyUtils.reminderPreParto();
 
+            }
+   
 }
