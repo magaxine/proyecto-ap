@@ -10,4 +10,5 @@
     <tab>Vacunacion__c</tab>
     <tab>Paricion__c</tab>
     <tab>standard-Event</tab>
+    <tab>Chacra__c</tab>
 </CustomApplication>
