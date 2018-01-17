@@ -113,6 +113,10 @@
     <label>Parición</label>
     <listViews>
         <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Fecha__c</columns>
+        <columns>Vaca__c</columns>
+        <columns>Sexo_de_cria__c</columns>
         <filterScope>Everything</filterScope>
         <label>All</label>
     </listViews>

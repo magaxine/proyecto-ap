@@ -17,7 +17,6 @@
         <members>Medicion_Lechera__c</members>
         <members>Paricion__c</members>
         <members>Vaca__c</members>
-        <members>Vacunacion__c</members>
         <name>CustomObject</name>
     </types>
     <types>

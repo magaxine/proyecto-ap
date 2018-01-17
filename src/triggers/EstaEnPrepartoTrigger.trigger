@@ -8,6 +8,10 @@ trigger EstaEnPrepartoTrigger on Vaca__c (before update) {
          if(!iOld.En_pre_parto__c && iNew.En_pre_parto__c ){
                  iNew.En_tambo__c = false;
          }
+         
+         if(!iOld.En_tambo__c && iNew.En_tambo__c){
+             	iNew.En_pre_parto__c = false;
+         }
         
      } 
 }

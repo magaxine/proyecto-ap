@@ -101,6 +101,10 @@
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Mediciones Lecheras</pluralLabel>
-    <searchLayouts/>
+    <searchLayouts>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Litros__c</searchFilterFields>
+        <searchFilterFields>Fecha__c</searchFilterFields>
+    </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
 </CustomObject>

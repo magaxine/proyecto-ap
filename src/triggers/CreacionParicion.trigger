@@ -1,6 +1,6 @@
 trigger CreacionParicion on Inseminacion__c (after update) {
     
-    //Debo comparar los old con los new para saber si 
+    //Debo comparar los old con los new
     for(integer i=0; i<Trigger.New.size();i++){
         Inseminacion__c iOld = Trigger.Old.get(i);
         Inseminacion__c iNew = Trigger.New.get(i);
@@ -41,7 +41,7 @@ trigger CreacionParicion on Inseminacion__c (after update) {
             //Seteo fecha de secado en objeto paricion
             Paricion__c paricion = new Paricion__c();
             paricion.Fecha__c= e.StartDateTime.addDays(1);
-            paricion.Fecha_en_pre_parto__c = e2.StartDateTime.addDays(1);
+            paricion.Fecha_en_pre_parto__c = e2.StartDateTime.addDays(1); //need to change
             paricion.Vaca__c = aux2.vaca__r.id;
             insert paricion;
      

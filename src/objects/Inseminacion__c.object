@@ -122,6 +122,9 @@
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Inseminaciones</pluralLabel>
-    <searchLayouts/>
+    <searchLayouts>
+        <searchResultsAdditionalFields>Fecha__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Vaca__c</searchResultsAdditionalFields>
+    </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
 </CustomObject>

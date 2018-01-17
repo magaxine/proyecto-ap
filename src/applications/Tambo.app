@@ -7,7 +7,6 @@
     <tab>Vaca__c</tab>
     <tab>Inseminacion__c</tab>
     <tab>Medicion_Lechera__c</tab>
-    <tab>Vacunacion__c</tab>
     <tab>Paricion__c</tab>
     <tab>standard-Event</tab>
     <tab>Chacra__c</tab>
