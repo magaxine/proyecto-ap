@@ -1,3 +1,6 @@
+/*Este trigger se dispara cuando se marca una inseminacion efectiva.
+Se crea un evento 'paricion' relacionado a la vaca y se setean las fechas de parto-pre/parto
+de acuerdo a la fecha de inseminacion.*/
 trigger CreacionParicion on Inseminacion__c (after update) {
     
     //Debo comparar los old con los new
@@ -31,12 +34,13 @@ trigger CreacionParicion on Inseminacion__c (after update) {
             e2.Subject = 'Secado de vaca' + ' ' + aux2.Vaca__r.Nro_de_vaca__c;
 			insert e2;
             
+             //Updateo a la vaca con ese Id para marcar que esta preñada
             
-             //Updateo a la vaca con ese Id para marcar que esta pregnant
             Vaca__c vaca = new Vaca__c();
             vaca.id = aux.Vaca__r.Id;
-            vaca.En_tambo__c = true;
+            vaca.Preniada__c = true;
             update vaca;
+			
             
             //Seteo fecha de secado en objeto paricion
             Paricion__c paricion = new Paricion__c();
