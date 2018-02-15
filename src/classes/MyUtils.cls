@@ -14,17 +14,17 @@ public class MyUtils {
             Vaca__c vaca = [select Nro_de_vaca__c 
                             from Vaca__c
                             where id=:paricion.Vaca__c];
-            if(paricion.Fecha_en_pre_parto__c == hoy.addDays(2)){
+            if(paricion.Fecha_en_pre_parto__c == hoy.addDays(2) && paricion.Aborto__c == false){
                 //Create mail
                 Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
                 String[] toAddresses = new String[] {'victoria.armario@gmail.com'};
                     mail.setToAddresses(toAddresses);
                 mail.setSubject('Secado de vaca');
                 mail.setSenderDisplayName('Tambo Cows');
-                mail.setPlainTextBody('La vaca '+ vaca.Nro_de_Vaca__c + 'entra en pre-parto: ' + paricion.Fecha_en_pre_parto__c);
+                mail.setPlainTextBody('La vaca '+ vaca.Nro_de_Vaca__c + ' entra en pre-parto: ' + paricion.Fecha_en_pre_parto__c);
                 Messaging.sendEmail(new Messaging.SingleEmailMessage[] { mail });
             }//endif
-            if(paricion.Fecha__c == hoy.addDays(3)){
+            if(paricion.Fecha__c == hoy.addDays(3) && paricion.Aborto__c == false){
                 Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
                 String[] toAddresses = new String[] {'victoria.armario@gmail.com'};
                     mail.setToAddresses(toAddresses);

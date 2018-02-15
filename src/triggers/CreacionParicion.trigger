@@ -45,7 +45,7 @@ trigger CreacionParicion on Inseminacion__c (after update) {
             //Seteo fecha de secado en objeto paricion
             Paricion__c paricion = new Paricion__c();
             paricion.Fecha__c= e.StartDateTime.addDays(1);
-            paricion.Fecha_en_pre_parto__c = e2.StartDateTime.addDays(1); //need to change
+            paricion.Fecha_en_pre_parto__c = e2.StartDateTime.addDays(1); //210
             paricion.Vaca__c = aux2.vaca__r.id;
             insert paricion;
      
