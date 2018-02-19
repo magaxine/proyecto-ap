@@ -69,11 +69,10 @@
         <fullName>Litros__c</fullName>
         <externalId>false</externalId>
         <label>Litros</label>
-        <precision>18</precision>
-        <required>true</required>
-        <scale>0</scale>
+        <length>5</length>
+        <required>false</required>
         <trackTrending>false</trackTrending>
-        <type>Number</type>
+        <type>Text</type>
         <unique>false</unique>
     </fields>
     <fields>

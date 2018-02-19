@@ -6,9 +6,9 @@
     <tab>Medicion_Lechera__c</tab>
     <tab>Inseminacion__c</tab>
     <tab>Paricion__c</tab>
+    <tab>Veterinaria__c</tab>
     <tab>Chacra__c</tab>
     <tab>standard-Dashboard</tab>
     <tab>standard-report</tab>
     <tab>standard-Event</tab>
-    <tab>Veterinaria__c</tab>
 </CustomApplication>

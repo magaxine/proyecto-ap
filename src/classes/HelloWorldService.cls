@@ -23,7 +23,7 @@
                         }
                     //tengo que chequear ademas q la vaca no este en tambo o en secado (preniada)
                     
-                    Vaca__c vaca= [Select id, Preniada__c, En_pre_parto__c from Vaca__c where id =:vacaId];
+                    Vaca__c vaca= [Select id, Preniada__c, En_pre_parto__c, Vendida__c, Muerta__c from Vaca__c where id =:vacaId];
         
                     System.debug('cantidad de inseminaciones no efectivas:' +count);
                     System.debug('vaca preniada?'+ vaca.Preniada__c);
@@ -35,7 +35,13 @@
                        return false; 
                     }else if(vaca.En_pre_parto__c){
                         System.debug('entre al if/vaca esta en pre parto:' + vaca.En_pre_parto__c);
-                        return false;     
+                        return false;   
+                    } else if (vaca.Vendida__c){
+                        System.debug('entre al if/vaca vendida:' + vaca.Vendida__c);
+                        return false; 
+                    }else if (vaca.Muerta__c){
+                        System.debug('entre al if/vaca muerta:' + vaca.Muerta__c);
+                        return false; 
                     }else{
                         return true;
                     }
